@@ -37,7 +37,7 @@ Route::get('/atividade/{id}/edit', [ProdutoController::class, 'edit'])->name('ed
 Route::post('/atividade/{id}/update', [ProdutoController::class, 'update'])->name('update');
 //Atividades Delete
 Route::get('/atividade/{id}/delete', [Atividades::class, 'delete'])->name('delete');
-Route::post('/atividade/{id}/remove', [Atividades::class, 'remove'])->name('remove');
+Route::post('/atividade/{id}/remove', [Atividades::class, 'remove'])->name('atividades.remove');
 
 //Atividades Read
 Route::get('/atividades', [AtividadesController::class, 'index']);

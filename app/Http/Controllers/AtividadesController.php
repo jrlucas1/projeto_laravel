@@ -61,14 +61,15 @@ class AtividadesController extends Controller
     public function delete($id){
 
         return view('atividades.remove', [
-            'atividade' -> Atividades::find($id);
+            'atividade' -> Atividades::find($id)
         ]);
     }
 
     public function remove(Request $request, $id){
 
         if($request->confirmar==="Deletar")
-                dd("Erro ao deletar o produto $id !");
-        return redirect('/atividades');
+            if(!Atividades::destroy($id))
+            dd("Erro ao deletar o produto $id !");
+        return redirect('/atividades/');
     }
 }
