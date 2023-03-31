@@ -25,6 +25,7 @@
                 <td>{{$atividade->desc}}</td>
                 <td>{{$atividade->valor}}</td>
                 <td>{{$atividade->status}}</td>
+                <td><a href="{{route('delete', $atividade->id)}}" title="Deletar">&#128465</a></td>
             </tr>
             @endforeach
         </tbody>
